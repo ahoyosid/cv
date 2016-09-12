@@ -1,0 +1,247 @@
+\documentclass[letterpaper]{article}
+\usepackage{comment}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage[USenglish]{babel}
+\usepackage[sc,osf]{mathpazo}
+\usepackage{helvetica}
+%\usepackage{newcent}
+\usepackage{color}
+\usepackage{graphicx}
+
+\definecolor{MyColor}{rgb}{0.13,0.15,0.35}
+
+% Set your name here
+\def\name{Andr\'{e}s HOYOS IDROBO}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = MyColor,
+  pdfauthor = {\name},
+  pdfkeywords = {Machine learning, Neuroimaging, Statistics, Signal Processing},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 8.5in},
+  left=1.0in,
+  top=1.25in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{Curriculum Vitae}
+\thispagestyle{empty}
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+\newenvironment{itemize_cv}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+  }
+}{
+  \end{list}
+}
+
+\setlength{\tabcolsep}{.16667em}
+
+\begin{document}
+
+% Place name at left
+\begin{minipage}[t]{0.55\textwidth}
+\raggedright
+{\huge \name}\\
+{\large PhD candidate}
+\end{minipage} %
+\begin{minipage}[t]{0.45\textwidth}
+\raggedleft
+76, av du géneral léclerc\\ 
+92340 Bourg-la-Reine, \textsc{FRANCE} \\
+\hfill{(+33) 6 64 76 42 00 }\\
+\href{mailto:andres.hoyos-idrobo@inria.fr}{\tt andres.hoyos-idrobo@inria.fr} \\
+\hfill {\href{https://ahoyosid.github.io/}{\tt personal webpage}}\\
+\end{minipage}
+
+\vspace{0.1in}
+
+
+%Seprarator
+\noindent
+\hrulefill
+
+%\vspace{0.1in}
+
+
+\section*{Research interest}
+%
+I'm broadly interested in machine learning and statistics. 
+%
+My research focus on problems which arise while applying machine learning 
+techniques to large-scale and high dimensional datasets, for instance fMRI 
+data. 
+%
+Part of my research aims to find faster statistical methods for large-scale 
+fMRI analysis while increasing their stability and prediction capability. 
+%
+On the neuroscience side, I'm using machine learning techniques for inferring 
+cognitive states encoded in brain activation images (decoding).
+
+\begin{itemize}
+\item Task-based functional Magnetic Resonance Imaging
+\item Brain activation decoding
+\item Randomized methods
+\item Clustering
+\end{itemize}
+
+
+
+\section*{Education}
+
+\textbf{Paris-Saclay University} \hfill Orsay, France\\
+PhD candidate in Informatics \hfill 2014-Present\\
+PARIETAL Team -- MSR-INRIA\\
+%Dissertation: Mining the functional organization of the brain\\
+Advisors: Bertrand THIRION (Inria), Ga\"el VAROQUAUX (Inria)\\
+
+\vspace{0.1in}
+
+\textbf{Ecole Normale Supérieure de Cachan} \hfill Cachan, France\\
+M.Sc. Mathematics, vision and learning (M2 MVA) \hfill 2013\\
+Benchmark of different solvers to optimize the pulse design in high-field MRI 
+under strict patient security constraints.  
+
+\vspace{0.1in}
+
+\textbf{Autónoma de Occidente University} \hfill Cali, Colombia\\
+B.S., Electronic Engineering \hfill 2010\\
+Development of a project using local-blocks SVD for image inpainting and 
+denoising.
+
+\vspace{0.1in}
+
+\textbf{Autónoma de Occidente University} \hfill Cali, Colombia\\
+B.S., Biomedical Engineering \hfill 2010\\
+Development of a project using dictionary learning to identify patterns in EKG 
+signals.
+
+\section*{Professional Experience}
+
+\textbf{IUT, Paris-Sud University} \hfill Orsay, France\\
+Teaching Assistant, Department of Informatics \hfill 2016\\
+Relational data bases and project management.
+
+\vspace{0.1in}
+
+\textbf{AmbarCorp (Startup)} \hfill Cali, Colombia\\
+Co-Founder and Product Development Officer \hfill 2010-2014\\
+Design and development of an electrostatic power supply.
+
+\vspace{0.1in}
+
+\textbf{Autónoma de Occidente University} \hfill Cali, Colombia\\
+Teaching Assistant, Department of Mathematics (engineering) \hfill 2009\\
+Linear algebra and calculus 
+
+
+\section*{Scientific Publications}
+
+\begin{itemize_cv}
+
+\item A. HOYOS IDROBO, P. WEISS, A. MASSIRE, A. AMADON, N. BOULANT. On Variant Strategies to Solve the Magnitude Least Squares Optimization Problem in Parallel Transmission Pulse Design and Under Strict SAR and Power Constraints. IEEE Trans. Med. Imaging 33(3): 739-748 (2014).
+
+\subsection*{In preparation}
+\item A. HOYOS-IDROBO, G. VAROQUAUX, B. THIRION. Faster and more stable brain 
+decoding using multiple bagged clusters. 
+
+\subsection*{Under review}
+\item A. HOYOS-IDROBO, G. VAROQUAUX, J. KAHN, B. THIRION. Fast approximation of 
+structured signals with clustering: Recursive nearest neighbor (ReNN). Summited 
+to TPAMI.
+
+\subsection*{Peer-reviewed conference proceedings}
+\item A. HOYOS-IDROBO, G. VAROQUAUX, B. THIRION. Fast brain decoding with 
+random sampling and random projections. International Workshop on Pattern 
+Recognition in Neuroimaging (PRNI). (2016) 
+
+\item A. HOYOS-IDROBO, Y. SCHWARTWZ, G. VAROQUAUX, B. THIRION.  Improving 
+sparse recovery on structured images with bagged clustering.  International 
+Workshop on Pattern Recognition in Neuroimaging (PRNI). 73-76 (2015).
+
+\begin{comment}
+\item
+A. HOYOS-IDROBO, A. CEBALLOS. Electroencephalographic signal representation of adult patients in colombia southwestern  using dictionary learning. In Proc. STSIVA 2011, p.160-165, v.1. ISBN: 978-958-8347-55-4.
+
+\item
+A. HOYOS-IDROBO, J. D. PULGARIN. Image inpainting using iterative T-SVD. In Proc. STSIVA 2011, p.176-182, v.1. ISBN: 978-958-8347-55-4.
+
+\item
+A. HOYOS-IDROBO, J. D. PULGARIN. Restoration by SVD and PDE-based  regularization methods  in 1D and 2D signals. In Proc. STSIVA 2009, p.1-6 , v.1. ISBN : 978-958-722-047-6.
+\end{comment}
+\end{itemize_cv}
+
+
+\section*{Software Skills}
+
+\begin{minipage}{0.50\linewidth}
+\begin{tabular}{rl}
+%Operating Systems: & Linux, Windows\\
+Programming: & Pyhon, C, Delphi\\
+Scientific: & Matlab\\
+Machine learning: & Scikit-learn, pandas, numpy\\
+Neuroimaging: & nilearn, FSL, nipy \\
+& version control (git)
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}{0.50\linewidth}
+\begin{tabular}{rl}
+Scripting: & Python, Shell \\
+Relational Data Base: & Firebird, Oracle, SqLite\\
+Web Design: & XHTML, JavaScript, CSS\\
+Typography: & \LaTeX\\
+\end{tabular}
+\end{minipage}
+
+
+
+%\section*{Professional Activities}
+%\begin{itemize}
+%\item Reviewer for IEEE Transactions on Image Processing Journal.
+%\end{itemize}
+
+
+\section*{Awards and Scholarships}
+
+\textbf{Fondation Mathématique Jacques Hadamard} \hfill France\\
+Sophie Germain Master Scholarship \hfill 2012-2013\\
+%Description: Scholarship and inscription to the M2 MVA at ENS Cachan\\ 
+
+\textbf{Autónoma de Occidente University} \hfill Cali, Colombia\\
+Academic Excellence, ECAES \hfill 2010\\
+%Description: Highest score, percentile greater than 90\\
+
+\section*{\textbf{Professional Memberships}}
+Member of Asociación Colombiana de Ingenieros, ACIEM   \hfill 2011-Present\\
+Member of Consejo Profesional Nacional de Ingeniería, COPNIA  \hfill 2011-Present \\
+%Member of Society of Industrial and Applied Mathematics, SIAM & \textbf{2012-present}
+
+\section*{Interests}
+
+\begin{tabular}{ll}
+\textbf{Research:} & Machine learning, statistical modeling, model selection, multivariate analysis, \\ 
+& functional brain imaging (fMRI)\\
+\textbf{Hobbies:} & Drawing \\
+\end{tabular}
+
+\section*{Langues}
+Spanish (native langue), English (acceptable), French (acceptable), Portuguese (basic).
+
+
+\end{document}
