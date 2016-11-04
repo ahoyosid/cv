@@ -1,5 +1,6 @@
 \documentclass[letterpaper]{article}
 \usepackage[top=0cm,bottom=2cm,left=0.5cm,right=2cm,headsep=10pt,a4paper]{geometry}
+\usepackage{fontawesome}
 \usepackage{comment}
 \usepackage{hyperref}
 \usepackage{amsmath}
@@ -10,16 +11,18 @@
 %\usepackage{newcent}
 \usepackage{color, colortbl}
 \usepackage[dvipsnames]{xcolor}
-\usepackage{graphicx}
 \usepackage{fullwidth}
 \usepackage{framed}
 \usepackage{fancyvrb}
-\usepackage{avant} % Use the Avantgarde font for headings
 %\usepackage{libertine}
 \usepackage{url}
 \usepackage{tikz}
 \usepackage{graphicx}
 \usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[multidot]{grffile}
+\usepackage{avant} % Use the Avantgarde font for headings
 
 \definecolor{Gray}{gray}{0.95}
 \newcommand{\MYhref}[3][black]{\href{#2}{\color{#1}{#3}}}%
@@ -27,6 +30,7 @@
 \renewcommand\familydefault{\sfdefault}
 \pagenumbering{gobble}
 
+\setlength{\tabcolsep}{2pt}
 
 % Set your name here
 \def\name{Andr\'{e}s HOYOS IDROBO}
@@ -68,13 +72,17 @@
 \colorbox{MidnightBlue}{
 \begin{minipage}{0.47\linewidth} % left page
 	\begin{minipage}{1\linewidth}
-		\centering{\huge\textmd{\textcolor{white}{Engineering}}}
+		\centering{\includegraphics[width=0.06\linewidth]{gear.eps} 
+		\huge\textmd{\textcolor{white}{Engineering}}}
 		\vspace{2ex}
 	\end{minipage}
 	%
 	\begin{minipage}{1\linewidth} % first row
 		\begin{minipage}{0.47\linewidth}
-			\centering{\Large\textmd{\textcolor{white}{Signal Processing}}}\\
+			\begin{tabularx}{1\textwidth}{rX}
+				& \Large\textmd{\textcolor{white}{Signal}}\\
+				& \Large\textmd{\textcolor{white}{Processing}}\\
+			\end{tabularx}
 			\vspace{1ex}
 			\begin{minipage}{1\linewidth}
 				\small\textcolor{white}{
@@ -88,7 +96,10 @@
 		\end{minipage}
 		\hfill
 		\begin{minipage}{0.47\linewidth}
-			\centering{\Large\textmd{\textcolor{white}{Supervised Learning}}}\\
+			\begin{tabularx}{1\textwidth}{rX}
+				& \Large\textmd{\textcolor{white}{Supervised}}\\
+				& \Large\textmd{\textcolor{white}{Learning}}\\
+			\end{tabularx}
 			\vspace{1ex}
 			\begin{minipage}{1\linewidth}
 				\small\textcolor{white}{
@@ -106,8 +117,10 @@
 	%
 	\begin{minipage}{1\linewidth} % second row
 		\begin{minipage}{0.47\linewidth}
-			\centering{\Large\textmd{\textcolor{white}{Unsupervised 
-			Learning}}}\\
+			\begin{tabularx}{1\textwidth}{rX}
+				& \Large\textmd{\textcolor{white}{Unsupervised}}\\
+				& \Large\textmd{\textcolor{white}{Learning}}\\
+			\end{tabularx}
 			\vspace{1ex}
 			\begin{minipage}{1\linewidth}
 				\small\textcolor{white}{
@@ -123,25 +136,39 @@
 		\end{minipage}
 		\hfill
 		\begin{minipage}{0.47\linewidth}
-			\centering{\Large\textmd{\textcolor{white}{Software Development}}}\\
+			\begin{tabularx}{1\textwidth}{rX}
+				& \Large\textmd{\textcolor{white}{Software}}\\
+				& \Large\textmd{\textcolor{white}{Development}}\\
+			\end{tabularx}
 		\end{minipage}
 	\end{minipage}\\
 	%
 	\begin{minipage}{1\linewidth} % third row
 		\begin{minipage}{0.47\linewidth}
-		\centering{\Large\textmd{\textcolor{white}{Data Visualization}}}\\
+			\begin{tabularx}{1\textwidth}{rX}
+				& \Large\textmd{\textcolor{white}{Data}}\\
+				& \Large\textmd{\textcolor{white}{Visualization}}\\
+			\end{tabularx}
 		\vspace{1ex}
 		\end{minipage}
 		\hfill
 		\begin{minipage}{0.47\linewidth}
-		\centering{\Large\textmd{\textcolor{white}{Development}}}\\
-		\vspace{1ex}
+			\begin{tabularx}{1\textwidth}{rX}
+			\includegraphics[width=0.1\linewidth]{code.eps} & 
+			\Large\textmd{\textcolor{white}{Development}}\\
+			\end{tabularx}
+			\vspace{1ex}
+			\begin{tabularx}{1\textwidth}{rr}
+				\includegraphics[width=0.15\linewidth]{python-48.png} & 
+				\textcolor{white}{Python}
+			\end{tabularx}
 		\end{minipage}\\ 
 		%\vspace{70ex}
 	\end{minipage} % third row
 	%
 	\begin{minipage}{1\linewidth} % teaching
-		\centering{\huge\textmd{\textcolor{white}{Teaching}}}\\
+		\centering{\includegraphics[width=0.08\linewidth]{teaching.eps} 
+		\huge\textmd{\textcolor{white}{Teaching}}}\\
 		\vspace{2ex}
 		\begin{minipage}{0.9\linewidth}
 			{\normalsize \textcolor{white}{Project Management @ Institut 
@@ -160,7 +187,8 @@
 		\end{minipage} 
 	\end{minipage} % teaching	
 	\begin{minipage}{1\linewidth} % languages
-		\centering{\huge\textmd{\textcolor{white}{Languages}}}\\
+		\centering{\includegraphics[width=0.06\linewidth]{worldwide.eps} 
+		\huge\textmd{\textcolor{white}{Languages}}}\\
 		\vspace{2ex}
 		\begin{minipage}{0.3\linewidth}
 			{\normalsize \textcolor{white}{Spanish}}\\
@@ -185,61 +213,80 @@
 \hfill
 \begin{minipage}{0.47\linewidth}
 	\begin{minipage}{1\linewidth}
-	\centering{\huge\textmd{Research}}
+	\centering{\includegraphics[width=0.05\linewidth]{flask-outline.eps} 
+	\huge\textmd{Research}}
 	\end{minipage}
 	\begin{minipage}{1\linewidth} % PhD
 		\vspace{2ex}
-		{\Large PhD canditate in computer science @ Inria}\\
-		{\small\textcolor{gray}{January 2014 - Current}}
+		\begin{tabularx}{1\textwidth}{rX}				
+			\multirow{2}{*}{\includegraphics[trim= 0.1cm 0.1cm 0.1cm 0.1cm,	
+			clip=true, width=0.12\linewidth]{hat.eps}} & {\large PhD canditate 
+			in computer science @ Inria}\\
+			& {\small\textcolor{gray}{January 2014 - Current}}\\
+		\end{tabularx}
+		\vspace{0.1cm}
 		
-		{\textbf{Faster brain decoding:} Finding faster statistical methods 
-		for large-scale fMRI analysis while increasing their stability and 
-		prediction 
-		capability.
+		{\small\textbf{Faster brain decoding:} Finding faster statistical 
+		methods for large-scale fMRI analysis while increasing their stability 
+		and prediction capability.
 	
 		Python + Scikit-learn + statistical learning + cluster computing
 		
-		Advisors: Bertrand Thirion, Gaël Varoquaux}
+		\textmd{Advisors:} Bertrand Thirion, Ga{\"e}l Varoquaux}
 	\end{minipage} %PhD
 	\begin{minipage}{1\linewidth} % Master
 		\vspace{2ex}
-		{\Large MVA master @ ENS-Cachan }\\
-		{\small\textcolor{gray}{September 2012 - 2013}}
+		\begin{tabularx}{1\textwidth}{rX}				
+			\multirow{2}{*}{\includegraphics[trim= 0.1cm 0.1cm 0.1cm 0.1cm, 
+			clip=true, width=0.12\linewidth]{hat.eps}} & 
+			{\large MVA master @ ENS-Cachan }\\
+			& {\small\textcolor{gray}{September 2012 - 2013}}\\
+		\end{tabularx}
+		\vspace{0.1cm}
 		
-		{Image/Signal Processing, Statistical Learning, Medical imaging
+		{\small Image/Signal Processing, Statistical Learning, Medical imaging
 		
-		Project: Optimization of radio frequency pulse design in high filed 
-		margnetic 
-		resonance imaging
+		\textmd{Project:} Optimization of radio frequency pulse design in high 
+		filed magnetic resonance imaging
 		
 		Matlab + CUDA + mathematical optimization
 		
-		Advisor: Nicolas Boulant}
+		\textmd{Advisor:} Nicolas Boulant}
 	\end{minipage} %Master
 	\begin{minipage}{1\linewidth} % Bachelor: Biomedical
 		\vspace{2ex}
-		{\Large Bs.C in Biomedical Enginieering @ UAO}\\
-		{\small\textcolor{gray}{September 2014 - 2010}}
+		\begin{tabularx}{1\textwidth}{rX}				
+			\multirow{2}{*}{\includegraphics[trim= 0.1cm 0.1cm 0.1cm 0.1cm,	
+			clip=true, width=0.12\linewidth]{hat.eps}} & {\large Bs.C in 
+			Biomedical Enginieering @ UAO}\\
+			& {\small\textcolor{gray}{September 2014 - 2010}}\\
+		\end{tabularx}
+		\vspace{0.1cm}
 		
-		{Development of projects applied to biomechanics and biomedical signal 
-		processing
+		{\small Development of projects applied to biomechanics and biomedical 
+		signal processing
 		
 		Matlab + Matrix fatorization
 		
-		Advisor: Juan Diego Pulgarin}
+		\textmd{Advisor:} Juan Diego Pulgarin}
 	\end{minipage} %Bachelor: electronics
 	\begin{minipage}{1\linewidth} % Bachelor: Biomedical
 		\vspace{2ex}
-		{\Large Bs.C in Biomedical Enginieering @ UAO}\\
-		{\small\textcolor{gray}{September 2014 - 2010}}
+		\begin{tabularx}{1\textwidth}{rX}				
+			\multirow{2}{*}{\includegraphics[trim= 0.1cm 0.1cm 0.1cm 0.1cm, 
+			clip=true, width=0.12\linewidth]{hat.eps}} & {\large Bs.C in 
+			Biomedical Enginieering @ UAO}\\
+			& {\small\textcolor{gray}{September 2014 - 2010}}
+		\end{tabularx}
+		\vspace{0.1ex}
 		
-		{Development of projects using neural networks, genetic algorithm, 
-		fuzzy logic, 
-		meta-heuristic, control, power electronics
-		
+		{\small Development of projects using neural networks, genetic 
+		algorithm, fuzzy logic, meta-heuristic optimization, control, power 
+		electronics
+				
 		Matlab + Matrix factorization + Regularization
 		
-		Advisor: Juan Diego Pulgarin}\\
+		\textmd{Advisor:} Juan Diego Pulgarin}\\
 	\end{minipage} %Bachelor: electronics
 	\begin{minipage}{1\linewidth}
 		\vspace{2ex}
@@ -263,7 +310,7 @@
 		\centering
 		\begin{tikzpicture}
 			\begin{scope}
-			    \clip [rounded corners=1.5cm] (0,0) rectangle coordinate 
+			    \clip [rounded corners=1.7cm] (0,0) rectangle coordinate 
 			    (centerpoint)++(3.5cm,3.5cm); 
 			    \node [inner sep=0pt] at (centerpoint) 
 			    {\includegraphics[width=3.5cm]{ahoyosid.png}};
@@ -279,35 +326,38 @@
 	\end{minipage}
 	%
 	\begin{minipage}{1\linewidth}
-		\centering{\huge\textmd{\textcolor{black}{Contact}}}\\
+		\centering{\includegraphics[width=0.08\linewidth]{paper-plane.eps} 
+		\huge\textmd{\textcolor{black}{Contact}}}\\
 		\vspace{2ex}
 		\begin{minipage}{1\linewidth}
-			\begin{tabularx}{1\textwidth}{cX}
-				& \textcolor{black}{76 av du general Leclerc}\\
+			\begin{tabularx}{1\textwidth}{rX}
+				\faEnvelopeAlt & \textcolor{black}{76 av du general 
+				Leclerc}\\
 				\vspace{1ex}
 				& \textcolor{black}{92340, bourg la reine}\\
 				
-				& 
+				\faMobilePhone& 
 				\textcolor{black}{\MYhref{ahoyosidrobo@gmail.com}{ahoyosidrobo@gmail.com}}\\
 				\vspace{1ex}
 				& \textcolor{black}{+33 6 64 76 42 00}\\				
 				\vspace{1ex}
-				& 
+				\faHome    & 
 				\textcolor{black}{\MYhref{https://ahoyosid.github.io/}{https://ahoyosid.github.io/}}\\
 				\vspace{1ex}
-				& 
+				\faTwitter & 
 				\textcolor{black}{\MYhref{twitter.com/ahoyosid}{twitter.com/ahoyosid}}\\
 				\vspace{1ex}
-				& 
+				\faGithub  & 
 				\textcolor{black}{\MYhref{github.com/ahoyosid}{github.com/ahoyosid}}\\
 				\vspace{1ex}
-				& 
+				\faLinkedin & 
 				\textcolor{black}{\MYhref{linkedin.com/in/andres-hoyos-idroboi-85b42024}{linkedin.com/in/andres-hoyos-idroboi-85b42024}}\\
 			\end{tabularx}
 		\end{minipage} 
 	\end{minipage} % contact
 	\begin{minipage}{1\linewidth} % Publications
-		\centering{\huge\textmd{\textcolor{black}{Publications}}}\\
+		\centering{\includegraphics[width=0.045\linewidth]{text-document.eps} 
+		\huge\textmd{\textcolor{black}{Publications}}}\\
 		\vspace{2ex}
 		\begin{minipage}{1\linewidth}
 			\begin{tabularx}{\textwidth}{cX}
