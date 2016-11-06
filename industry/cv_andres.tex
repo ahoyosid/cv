@@ -1,5 +1,5 @@
 \documentclass[letterpaper]{article}
-\usepackage[top=0cm,bottom=2cm,left=0.5cm,right=2cm,headsep=10pt,a4paper]{geometry}
+\usepackage[top=2cm,bottom=2cm,left=0.5cm,right=2cm,headsep=10pt,a4paper]{geometry}
 \usepackage{fontawesome}
 \usepackage{comment}
 \usepackage{hyperref}
@@ -21,6 +21,7 @@
 \usepackage{tabularx}
 \usepackage{multirow}
 \usepackage{booktabs}
+\usepackage{array}
 \usepackage[multidot]{grffile}
 \usepackage{avant} % Use the Avantgarde font for headings
 
@@ -35,6 +36,11 @@
 % Set your name here
 \def\name{Andr\'{e}s HOYOS IDROBO}
 
+\newcolumntype{L}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedright\arraybackslash}X}%
+
+
+
 \urlstyle{sf}
 
 % The following metadata will show up in the PDF properties
@@ -42,7 +48,8 @@
   colorlinks = true,
   urlcolor = white,
   pdfauthor = {\name},
-  pdfkeywords = {Machine learning, Neuroimaging, Statistics, Signal Processing},
+  pdfkeywords = {Machine learning, Large-scale machine learning, Statistics, 
+  Signal Processing, Deep learning},
   pdftitle = {\name: Curriculum Vitae},
   pdfsubject = {Curriculum Vitae},
   pdfpagemode = UseNone
@@ -51,8 +58,6 @@
 \begin{document}
 
 
-
-%\begin{fullwidth}
 \colorbox{Gray}{
 \makebox[1\linewidth]{
 \begin{minipage}[b]{1\linewidth}
@@ -67,12 +72,15 @@
 \vspace{2ex}
 
 
-\begin{minipage}{1.\linewidth} % main page
-
+\begin{minipage}[t]{1.\linewidth} % main page
+%
+\begin{minipage}{0.47\linewidth}
+\vspace{3ex}
 \colorbox{MidnightBlue}{
-\begin{minipage}{0.47\linewidth} % left page
+\begin{minipage}{1\linewidth} % left page
 	%
-	\begin{minipage}{1\linewidth}
+	\begin{minipage}[t]{1\linewidth}
+		\vspace{2ex}
 		\centering{\includegraphics[width=0.06\linewidth]{gear.eps} 
 		\huge\textmd{\textcolor{white}{Engineering}}}\\
 		\vspace{2ex}
@@ -82,98 +90,61 @@
 			{\small\textcolor{gray!40}{September 2010 - 2014 \hfill Colombia}}\\
 			{\small\textcolor{white}{Design and development of an electrostatic 
 			power supply.}}\\
-			\vspace{1ex}
+			\vspace{4ex}
 		\end{minipage} 		
 	\end{minipage}	
 	%
-	\begin{minipage}{1\linewidth} % teaching
-		\centering{\includegraphics[width=0.08\linewidth]{teaching.eps} 
-		\huge\textmd{\textcolor{white}{Teaching}}}\\
-		\vspace{2ex}
-		\begin{minipage}{0.9\linewidth}
-			{\normalsize \textcolor{white}{Project Management @ Institut 
-			Universitaire Technologique d'Orsay}}\\
-			{\small\textcolor{gray!40}{2015 - one semester \hfill Orsay}}\\
-			{\small\textcolor{white}{Teacher assistant of second year's final 
-			project}}\\			
-		\end{minipage} 
-		\begin{minipage}{0.9\linewidth}
-			{\normalsize \textcolor{white}{Relational Data Bases @ Institut 
-			Universitaire Technologique d'Orsay}}\\					
-			{\small\textcolor{gray!40}{2016 - one semester \hfill Orsay}}\\
-			{\small\textcolor{white}{Teacher assistant of SQL and 
-			PL-SQL}}\\			
-		\end{minipage} 
-		\begin{minipage}{0.9\linewidth}
-			{\normalsize \textcolor{white}{Mathematics @ 
-			UAO}}\\					
-			{\small\textcolor{gray!40}{2009 - one semester \hfill Colombia}}\\
-			{\small\textcolor{white}{Teacher assistant of linear algebra and 
-			calculus}}\\
-			\vspace{1ex}
-		\end{minipage} 
-	\end{minipage} % teaching	
-	\begin{minipage}{1\linewidth} % languages
-		\centering{\includegraphics[width=0.06\linewidth]{worldwide.eps} 
-		\huge\textmd{\textcolor{white}{Languages}}}\\
-		\vspace{2ex}
-		\begin{minipage}{0.28\linewidth}
-			\centering
-			{\normalsize \textcolor{white}{Spanish}}\\
-			{\small\textcolor{gray!40}{Mother tongue}}\\
-		\end{minipage} 
-		%\hfill
-		\begin{minipage}{0.18\linewidth}
-			\centering
-			{\normalsize \textcolor{white}{English}}\\					
-			{\small\textcolor{gray!40}{Fluent}}\\
-		\end{minipage} 
-		%\hfill
-		\begin{minipage}{0.2\linewidth}
-			\centering
-			{\normalsize \textcolor{white}{French}}\\					
-			{\small\textcolor{gray!40}{Fluent}}\\
-		\end{minipage}
-		%\hfill
-		\begin{minipage}{0.2\linewidth}
-			\centering
-			{\normalsize \textcolor{white}{Portuguese}}\\					
-			{\small\textcolor{gray!40}{Basic}}\\
-		\end{minipage}\\
-		\vspace{3ex}
-	\end{minipage} % languages	
-	%
 	\begin{minipage}{1\linewidth} % first row
-		\begin{minipage}{0.47\linewidth}
+
+		\begin{minipage}[t]{0.47\linewidth}
 			\begin{tabularx}{1\textwidth}{rX}
-				& \large\textmd{\textcolor{white}{Signal}}\\
-				& \large\textmd{\textcolor{white}{Processing}}\\
-			\end{tabularx}
+				\multirow{2}{*}{\includegraphics[width=0.18\linewidth]{clustering.eps}}
+				& \large\textmd{\textcolor{white}{Unsupervised}}\\
+				& \large\textmd{\textcolor{white}{Learning}}\\
+			\end{tabularx}\\
 			\vspace{1ex}
 			\begin{minipage}{1\linewidth}
 				\textcolor{white}{\small
-				\begin{tabularx}{1\textwidth}{cX}
-					& Feature extraction \\
-					& inverse problems: debluring, denoising, superresolution\\
+				\begin{tabularx}{1\textwidth}{lR}
+					\smallskip			
+					& \textmd{Clustering:} {\scriptsize Hierarchical, 
+					spectral, k-means}\\
+					\smallskip
+					& \textmd{Feature selection:} {\scriptsize univariate}\\
+					\smallskip
+					& \textmd{Dimension-reduction:} {\scriptsize random 
+					embeddings, manifold
+					learning}\\
+					\smallskip
+					& \textmd{Matrix factorization:} {\scriptsize PCA, ICA, 
+					NMF, dictionary 
+					learning}\\
 				\end{tabularx}
 				} 
 			\end{minipage}
-			\vspace{2ex}
+			\vspace{2ex}			
 		\end{minipage}
 		\hfill
-		\begin{minipage}{0.47\linewidth}
+		\begin{minipage}[t]{0.47\linewidth}
 			\begin{tabularx}{1\textwidth}{rX}
+				\multirow{2}{*}{\includegraphics[width=0.18\linewidth]{supervized.eps}}
 				& \large\textmd{\textcolor{white}{Supervised}}\\
 				& \large\textmd{\textcolor{white}{Learning}}\\
-			\end{tabularx}
+			\end{tabularx}\\
 			\vspace{1ex}
 			\begin{minipage}{1\linewidth}
 				\textcolor{white}{\small
-				\begin{tabularx}{1\textwidth}{lX}
-					& Generalized Linear Models\\
-					& Decision Trees\\
-					& Gaussian Processes\\
-					& Neural Networks\\
+				\begin{tabularx}{1\textwidth}{lR}
+					\smallskip
+					& \textmd{Generalized Linear Models:} {\scriptsize Ridge, 
+					LASSO, SVM, logistic regression}\\
+					\smallskip
+					& \textmd{Gaussian Processes}\\
+					\smallskip
+					& \textmd{Neural Networks:} {\scriptsize CNN, RNN}\\
+					\smallskip
+					& \textmd{Ensemble models:} {\scriptsize Bagging estimator, 
+					AdaBoost, gradient boosting, random forest}\\
 				\end{tabularx}
 				} 
 			\end{minipage}
@@ -182,71 +153,94 @@
 	\end{minipage}\\ % fist row
 	%
 	\begin{minipage}{1\linewidth} % second row
-		\begin{minipage}{0.47\linewidth}
+		\begin{minipage}[t]{0.47\linewidth}
 			\begin{tabularx}{1\textwidth}{rX}
-				& \large\textmd{\textcolor{white}{Unsupervised}}\\
-				& \large\textmd{\textcolor{white}{Learning}}\\
-			\end{tabularx}
+				\multirow{2}{*}{\includegraphics[width=0.18\linewidth]{signal.eps}}
+				& \large\textmd{\textcolor{white}{Signal}}\\
+				& \large\textmd{\textcolor{white}{Processing}}\\
+			\end{tabularx}\\
 			\vspace{1ex}
 			\begin{minipage}{1\linewidth}
 				\textcolor{white}{\small
-				\begin{tabularx}{1\textwidth}{cX}
-					& Clustering\\
-					& Feature selection\\
-					& Dimension reduction methods\\
-					& Matrix factorization methods\\
+				\begin{tabularx}{1\textwidth}{cR}
+					& \textmd{Signal preprocessing:} {\scriptsize 
+					standardization, normalization, filtering}\\
+					& \textmd{Feature extraction} \\
+					& \textmd{inverse problems:} {\scriptsize debluring, 
+					denoising, 
+					superresolution}\\
 				\end{tabularx}
 				} 
-			\end{minipage}
-			\vspace{2ex}
+			\end{minipage}	
 		\end{minipage}
 		\hfill
-		\begin{minipage}{0.47\linewidth}
+		\begin{minipage}[t]{0.47\linewidth}
 			\begin{tabularx}{1\textwidth}{rX}
-				\multirow{2}{*}{\includegraphics[width=0.1\linewidth]{visualize.eps}}
+				\multirow{2}{*}{\includegraphics[width=0.18\linewidth]{visualize.eps}}
 				 & \large\textmd{\textcolor{white}{Data}}\\
 				 & \large\textmd{\textcolor{white}{Visualization}}\\
-			\end{tabularx}
+			\end{tabularx}\\
+			\begin{minipage}{1\linewidth}
+				\vspace{1ex}
+				{\small
+				\begin{tabularx}{1\textwidth}{rX}
+					& \textcolor{white}{Statistical graphics}\\
+				 	& \textcolor{white}{Scientific visualization}\\
+				 	& \textcolor{white}{Exploratory data 
+				 	analysis}\\				 	
+				\end{tabularx}\\
+				}
+			\end{minipage}			
 		\vspace{1ex}
 		\end{minipage}		
 	\end{minipage}\\
 	%
 	\begin{minipage}{1\linewidth} % third row
-		\begin{minipage}{0.47\linewidth}
+		\vspace{2ex}
+		\begin{minipage}[t]{0.47\linewidth}
 			\begin{minipage}{1\linewidth}
 				\begin{tabularx}{1\textwidth}{rX}
+					\multirow{2}{*}{\includegraphics[width=0.18\linewidth]{arrows.eps}}
 					& \large\textmd{\textcolor{white}{Software}}\\
 					& \large\textmd{\textcolor{white}{Development}}\\
-				\end{tabularx}
+				\end{tabularx}\\
 			\end{minipage}
 			\begin{minipage}{1\linewidth}
+				\vspace{1ex}
 				{\small
 				\begin{tabularx}{1\textwidth}{rX}
 					& \textcolor{white}{Versioning}\\
 				 	& \textcolor{white}{Continuous integration}\\
 				 	& \textcolor{white}{Test-driven}\\				 	
-				\end{tabularx}
+				\end{tabularx}\\
 				}
 			\end{minipage}
 		\end{minipage}		
 		\hfill
-		\begin{minipage}{0.47\linewidth}
+		\begin{minipage}[t]{0.47\linewidth}
 			\begin{tabularx}{1\textwidth}{rX}
 				\includegraphics[width=0.1\linewidth]{code.eps} & 
 				\large\textmd{\textcolor{white}{Development}}\\
-			\end{tabularx}
+			\end{tabularx}\\
 			\vspace{1ex}
+			\textcolor{white}{\small
 			\begin{tabularx}{1\textwidth}{rX}
-				\includegraphics[trim=0.18cm 0.18cm 0.18cm 0.18cm, clip=true, 
-				width=0.08\linewidth]{python-48.png} & 
-				\small\textcolor{white}{Python}
+				 & \textmd{Programming:} \includegraphics[trim=0.18cm 0.18cm 
+				 0.18cm 
+				 0.18cm, clip=true, width=0.08\linewidth]{python-48.png} 
+				 {\scriptsize Python}\\
+				& \textmd{Scripting:} {\scriptsize Python, Shell}\\
+				& \textmd{Database:} {\scriptsize Oracle, firebird}\\
+				& \textmd{Typography:} {\scriptsize \LaTeX}\\
+				& \textmd{Web design:} {\scriptsize XHTML, CSS, JavaScript}\\
 			\end{tabularx}
+			}
 		\end{minipage}\\ 
-		%\vspace{70ex}
-	\end{minipage} % third row
-%
+		\vspace{2ex}
+	\end{minipage} % third row	
 \end{minipage} % left page
 }% End colorbox
+\end{minipage}
 % 
 %
 %
@@ -257,7 +251,7 @@
 	\huge\textmd{Research}}
 	\end{minipage}
 	\begin{minipage}{1\linewidth} % PhD
-		\vspace{2ex}
+		\vspace{4ex}
 		\begin{tabularx}{1\textwidth}{rX}				
 			\multirow{2}{*}{\includegraphics[trim= 0.1cm 0.1cm 0.1cm 0.1cm,	
 			clip=true, width=0.12\linewidth]{hat.eps}} & {\large PhD canditate 
@@ -278,7 +272,7 @@
 		\textmd{Advisors:} Bertrand Thirion, Ga{\"e}l Varoquaux}
 	\end{minipage} %PhD
 	\begin{minipage}{1\linewidth} % Master
-		\vspace{2ex}
+		\vspace{4ex}
 		\begin{tabularx}{1\textwidth}{rX}				
 			\multirow{2}{*}{\includegraphics[trim= 0.1cm 0.1cm 0.1cm 0.1cm, 
 			clip=true, width=0.12\linewidth]{hat.eps}} & 
@@ -300,7 +294,7 @@
 		\textmd{Advisor:} Nicolas Boulant}
 	\end{minipage} %Master
 	\begin{minipage}{1\linewidth} % Bachelor: Biomedical
-		\vspace{2ex}
+		\vspace{4ex}
 		\begin{tabularx}{1\textwidth}{rX}				
 			\multirow{2}{*}{\includegraphics[trim= 0.1cm 0.1cm 0.1cm 0.1cm,	
 			clip=true, width=0.12\linewidth]{hat.eps}} & {\large Bs.C in 
@@ -320,7 +314,7 @@
 		\textmd{Advisor:} Juan Diego Pulgarin}
 	\end{minipage} %Bachelor: electronics
 	\begin{minipage}{1\linewidth} % Bachelor: Biomedical
-		\vspace{2ex}
+		\vspace{4ex}
 		\begin{tabularx}{1\textwidth}{rX}				
 			\multirow{2}{*}{\includegraphics[trim= 0.1cm 0.1cm 0.1cm 0.1cm, 
 			clip=true, width=0.12\linewidth]{hat.eps}} & {\large Bs.C in 
@@ -340,54 +334,95 @@
 		\smallskip
 		\textmd{Advisor:} Juan Diego Pulgarin}\\
 	\end{minipage} %Bachelor: electronics
-	\begin{minipage}{1\linewidth}
-		\vspace{2ex}
-		\begin{minipage}{1\linewidth}
-			\centering{\huge\textmd{Research Interest}}\\
-		\end{minipage}
-		\begin{minipage}{1\linewidth}
-			\vspace{2ex}
-			{\small I'm broadly interested in machine learning and statistics. 
-			My research focus on problems which arise while applying machine 	
-			learning techniques to large-scale and high dimensional datasets,	
-			for instance fMRI data. 
-			Part of my research aims at finding faster statistical methods for 	
-			large-scale	fMRI analysis while increasing their stability and 		
-			prediction capability.\\
-			
-			\begin{tabularx}{1\textwidth}{rX}
-			\faCircle & Statistical/Machine learning\\
-			\faCircle & Randomized methods\\
-			\faCircle & Large-scale optimization\\
-			\end{tabularx}
-			}
-		\end{minipage}
-	\end{minipage}
 \end{minipage}
-\end{minipage}
+\end{minipage}\\
 
 
-\begin{minipage}{1\linewidth}
-\vspace{5ex}
+\begin{minipage}[t]{1\linewidth}
+%\vspace{6ex}
 \colorbox{MidnightBlue}{
-\begin{minipage}{0.47\linewidth} % left page
+\begin{minipage}[t]{0.47\linewidth} % left page
+%
+	\begin{minipage}{1\linewidth} % languages
+		\vspace{2ex}
+		\centering{\includegraphics[width=0.06\linewidth]{worldwide.eps} 
+		\huge\textmd{\textcolor{white}{Languages}}}\\
+		\vspace{2ex}
+		\begin{minipage}{\linewidth}	
+			\begin{minipage}{0.47\linewidth}
+				\centering
+				{\normalsize \textcolor{white}{Spanish}}\\
+				{\small\textcolor{gray!40}{Mother tongue}}\\
+			\end{minipage} 
+			%\hfill
+			\begin{minipage}{0.47\linewidth}
+				\centering
+				{\normalsize \textcolor{white}{English}}\\					
+				{\small\textcolor{gray!40}{Fluent}}\\
+			\end{minipage} 
+		\end{minipage}\\ 
+		\vspace{2ex}
+		\begin{minipage}{\linewidth}		
+			\begin{minipage}{0.47\linewidth}
+				\centering
+				{\normalsize \textcolor{white}{French}}\\					
+				{\small\textcolor{gray!40}{Fluent}}\\
+			\end{minipage}
+			%\hfill
+			\begin{minipage}{0.47\linewidth}
+				\centering
+				{\normalsize \textcolor{white}{Portuguese}}\\					
+				{\small\textcolor{gray!40}{Basic}}\\
+			\end{minipage}
+		\end{minipage}\\
+		\vspace{3ex}
+	\end{minipage} % languages	
+	%
+	\begin{minipage}{1\linewidth} % teaching
+		\centering{\includegraphics[width=0.08\linewidth]{teaching.eps} 
+		\huge\textmd{\textcolor{white}{Teaching}}}\\
+		\vspace{2ex}
+		\begin{minipage}{0.9\linewidth}
+			{\normalsize \textcolor{white}{Project Management @ Institut 
+			Universitaire Technologique d'Orsay}}\\
+			{\small\textcolor{gray!40}{2015 - one semester \hfill Orsay}}\\
+			{\small\textcolor{white}{Teacher assistant of second year's final 
+			project.}}\\			
+		\end{minipage} 
+		\begin{minipage}{0.9\linewidth}
+			{\normalsize \textcolor{white}{Relational Data Bases @ Institut 
+			Universitaire Technologique d'Orsay}}\\					
+			{\small\textcolor{gray!40}{2016 - one semester \hfill Orsay}}\\
+			{\small\textcolor{white}{Teacher assistant of SQL and 
+			PL-SQL.}}\\			
+		\end{minipage} 
+		\begin{minipage}{0.9\linewidth}
+			{\normalsize \textcolor{white}{Mathematics @ 
+			UAO}}\\					
+			{\small\textcolor{gray!40}{2009 - one semester \hfill Colombia}}\\
+			{\small\textcolor{white}{Teacher assistant of linear algebra and 
+			calculus.}}\\
+			\vspace{1ex}
+		\end{minipage} 
+	\end{minipage} % teaching		
+%
 	\begin{minipage}{1\linewidth}
 		\begin{minipage}{1\linewidth}
 			\centering{\includegraphics[width=0.045\linewidth]{medal.eps} 
 			\huge\textmd{\textcolor{white}{Awards \& scholarships}}}\\
 			\vspace{2ex}
 		\end{minipage}
-		\textcolor{white}{
+		\textcolor{white}{\normalsize
 		\begin{minipage}{1\linewidth}
 			\begin{tabularx}{1\textwidth}{rX}
-				& {\normalsize PhD funding -- Microsoft 
+				& {PhD funding -- Microsoft 
 				research-Inria}\\			
 				\vspace{1ex}								
 				& {\small \textcolor{gray!40}{January 2014 - 2017}}\\			
-				& {\normalsize Sophie Germain Master Scholarship -- FMJH}\\
+				& {Sophie Germain Master Scholarship -- FMJH}\\
 				\vspace{1ex}				
 				& {\small \textcolor{gray!40}{September 2012 - 2013}}\\
-				& {\normalsize Academic Excellence, ECAES -- UAO}\\
+				& {Academic Excellence, ECAES -- UAO}\\
 				& {\small \textcolor{gray!40}{September 2010}}\\				
 			\end{tabularx}
 		\end{minipage}
@@ -395,6 +430,43 @@
 		\vspace{2ex}
 	\end{minipage}
 	%
+	\begin{minipage}{1\linewidth} % Publications
+		\vspace{2ex}		
+		\centering{\includegraphics[width=0.045\linewidth]{text-document.eps} 
+		\huge\textmd{\textcolor{white}{Publications}}}\\
+		\vspace{2ex}
+		\begin{minipage}{1\linewidth}
+			\textcolor{white}{\normalsize 
+			\begin{tabularx}{\textwidth}{cR}
+				\smallskip
+				& {\textbf{Neuroimage} - Stable brain decoding with 
+				ensembles of estimators} \hfill \textcolor{gray!40}{In 
+				preparation}\\
+				\smallskip				
+				& {\textbf{IEEE TPAMI -} Recursive nearest 
+				agglomeration (ReNA): fast clustering for approximation of 
+				structured signals} \hfill \textcolor{gray!40}{submitted}\\
+				\smallskip				
+				& {\textbf{PRNI 2016 -} fast brain decoding with 
+				random sampling and random projections \hfill 
+				\textcolor{gray!40}{oral presentation}}\\
+				\smallskip				
+				& {\textbf{PRNI 2015 -} Improving sparse recovery 
+				on structured images with bagged clustering \hfill 
+				\textcolor{gray!40}{oral presentation}}\\
+				\smallskip				
+				& {\textbf{IEEE TMI -}  On variant strategies to 
+				solve the magnitude least squares optimization problem in 
+				parallel transmission pulse design and under strict SAR and 
+				power constraints}\\
+				\smallskip				
+				%& {\normalsize \textmd{Research report 2010} }\\
+				%\smallskip				
+				%& {\normalsize \textmd{Research report 2010}}\\
+			\end{tabularx}
+			}
+		\end{minipage} 
+	\end{minipage} % Publications	
 	\begin{minipage}{1\linewidth}
 		\centering{\includegraphics[width=0.07\linewidth]{drawing.eps} 
 		\huge\textmd{\textcolor{white}{Personal Interests}}}
@@ -402,31 +474,37 @@
 	\end{minipage}
 	\begin{minipage}{0.3\linewidth}
 		\vspace{1ex}
+		\centering
 		\begin{tabularx}{1\textwidth}{rr}
 			\includegraphics[width=0.15\linewidth]{pencil.eps} & 
 			\textcolor{white}{Drawing}
 		\end{tabularx}	
 	\end{minipage}
+	\hfill
 	\begin{minipage}{0.3\linewidth}
 		\vspace{1ex}
-		\begin{tabularx}{1\textwidth}{rr}
+		\centering
+		\begin{tabularx}{1\textwidth}{rr}	
 			\includegraphics[width=0.15\linewidth]{art-palette.eps} & 
 			\textcolor{white}{Painting}
 		\end{tabularx}	
 	\end{minipage}
+	\hfill
 	\begin{minipage}{0.3\linewidth}
 		\vspace{1ex}
+		\centering
 		\begin{tabularx}{1\textwidth}{rr}
 			\includegraphics[width=0.15\linewidth]{film-roll.eps} & 
 			\textcolor{white}{Cinema}
-		\end{tabularx}	
-	\end{minipage}		
+		\end{tabularx}\\	
+	\end{minipage}\\			
 \end{minipage}
 } % End colorbox
 %
 \hfill
 %
-\begin{minipage}{0.5\linewidth}
+\begin{minipage}[t]{0.5\linewidth}
+	\vspace{3ex}
 	\begin{minipage}{1\linewidth}
 		\centering
 		\begin{tikzpicture}
@@ -505,27 +583,35 @@
 			\end{tabularx}
 		\end{minipage} 
 	\end{minipage} % contact
-	\begin{minipage}{1\linewidth} % Publications
-		\centering{\includegraphics[width=0.045\linewidth]{text-document.eps} 
-		\huge\textmd{\textcolor{black}{Publications}}}\\
+	\begin{minipage}{1\linewidth} % research interest
 		\vspace{2ex}
 		\begin{minipage}{1\linewidth}
-			\begin{tabularx}{\textwidth}{cX}
-				& {\normalsize \textmd{IEEE TPAMI}}\\
-				  % %{\small\textcolor{gray}{submitted}\\
-				& {\normalsize \textmd{Neuroimage}}\\
-				  %{\small\textcolor{gray}{submitted}\\
-				& {\normalsize \textmd{PRNI 2016}}\\
-				& {\normalsize \textmd{PRNI 2015}}\\
-				& {\normalsize \textmd{IEEE TMI}}\\
-				& {\normalsize \textmd{Research report 2010}}\\
-				& {\normalsize \textmd{Research report 2010}}\\
+			\centering{\includegraphics[width=0.06\linewidth]{magnifying-glass.eps}
+			 \huge\textmd{Research Interest}}\\
+		\end{minipage}
+		\begin{minipage}{1\linewidth}
+			\vspace{2ex}
+			{\normalsize I'm broadly interested in machine learning and 
+			statistics. 
+			My research focus on problems which arise while applying machine 	
+			learning techniques to large-scale and high dimensional datasets,	
+			for instance fMRI data. 
+			Part of my research aims at finding faster statistical methods for 	
+			large-scale	fMRI analysis while increasing their stability and 		
+			prediction capability.\\
+			
+			\begin{tabularx}{1\textwidth}{rX}
+				\faCircle & Statistical/Machine learning\\
+				\faCircle & Randomized methods\\
+				\faCircle & Large-scale optimization\\
+				\faCircle & Applied mathematics\\
+				\faCircle & Image/Signal 
+				processing\\								
 			\end{tabularx}
-		\end{minipage} 
-	\end{minipage} % Publications		
-	
+			}
+		\end{minipage}
+	\end{minipage} % research interest	
 \end{minipage}
 \end{minipage}
-
 
 \end{document}
